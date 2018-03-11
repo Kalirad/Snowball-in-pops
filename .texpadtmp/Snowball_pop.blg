@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/Amfortas/Google Drive/workspace/snowball in pops/.texpadtmp/Snowball_pop.aux
+The style file: abbrv.bst
+Database file #1: ../library.bib
+Warning--I'm ignoring Cutter2011's extra "journal" field
+--line 1955 of file ../library.bib
+You've used 15 entries,
+            2118 wiz_defined-function locations,
+            624 strings with 7048 characters,
+and the built_in function-call counts, 5879 in all, are:
+= -- 570
+> -- 316
+< -- 0
++ -- 130
+- -- 110
+* -- 515
+:= -- 997
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 100
+chr.to.int$ -- 0
+cite$ -- 15
+duplicate$ -- 165
+empty$ -- 423
+format.name$ -- 110
+if$ -- 1172
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 15
+newline$ -- 78
+num.names$ -- 30
+pop$ -- 70
+preamble$ -- 1
+purify$ -- 85
+quote$ -- 0
+skip$ -- 107
+stack$ -- 0
+substring$ -- 482
+swap$ -- 15
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 60
+warning$ -- 0
+while$ -- 54
+width$ -- 17
+write$ -- 167
+(There was 1 warning)

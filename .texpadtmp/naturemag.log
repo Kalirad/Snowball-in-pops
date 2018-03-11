@@ -1,0 +1,3055 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2015.5.24)  8 NOV 2017 10:17
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**naturemag.bst
+(./naturemag.bst
+./naturemag.bst:74: You can't use `macro parameter character #' in horizontal mode.
+l.74 { #
+        0 'before.all :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:75: You can't use `macro parameter character #' in horizontal mode.
+l.75   #
+        1 'mid.sentence :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:76: You can't use `macro parameter character #' in horizontal mode.
+l.76   #
+        2 'after.sentence :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:77: You can't use `macro parameter character #' in horizontal mode.
+l.77   #
+        3 'after.block :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:83: Extra }, or forgotten $.
+l.83     { ", " * write$ }
+                          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:85: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.85         { add.period$
+                           write$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:85: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.85         { add.period$
+                           write$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:87: Undefined control sequence.
+l.87           "\newblock
+                          " write$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:88: Extra }, or forgotten $.
+l.88         }
+              
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:90: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.90             'write$
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:93: Extra }, or forgotten $.
+l.93         }
+              
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:99: Extra }, or forgotten $.
+l.99 }
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:101: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.101 { duplicate$
+                   empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:105: Extra }, or forgotten $.
+l.105 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:108: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.108   duplicate$
+                   empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:109: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.109     { pop$
+                 "empty " t * " in " * cite$ * warning$ }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:112: Extra }, or forgotten $.
+l.112 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:114: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.114 { add.period$
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:117: Too many }'s.
+l.117 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Overfull \hbox (119.91812pt too wide) in paragraph at lines 43--118
+\tenrm 's := out-put.state mid.sentence =  ", " * write$[]$ write$\teni newline$ \tenrm "" write$[]$|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm '
+.\tenrm s
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm :
+.\tenrm =
+.etc.
+
+./naturemag.bst:129: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.129         'skip$
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:132: Extra }, or forgotten $.
+l.132     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (28.43419pt too wide) in paragraph at lines 119--138
+[]\tenrm FUNCTION new.block  out-put.state be-fore.all = 'skip$[]\teni if$  \tenrm FUNC-TION new.sentence|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+./naturemag.bst:145: You can't use `macro parameter character #' in horizontal mode.
+l.145 {   { #
+             0 }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:146: You can't use `macro parameter character #' in horizontal mode.
+l.146     { #
+             1 }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:148: Extra }, or forgotten $.
+l.148 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:150: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.150 {   'skip$
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:151: You can't use `macro parameter character #' in math mode.
+l.151     { pop$ #
+                  0 }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:151: Extra }, or forgotten $.
+l.151     { pop$ #0 }
+                     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:155: You can't use `macro parameter character #' in math mode.
+l.155 {   { pop$ #
+                  1 }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:155: Extra }, or forgotten $.
+l.155 {   { pop$ #1 }
+                     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:158: Extra }, or forgotten $.
+l.158 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:160: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.160 { empty$
+              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:172: Extra }, or forgotten $.
+l.172 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:174: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.174 { empty$
+              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:186: Extra }, or forgotten $.
+l.186 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:188: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.188 { duplicate$
+                   empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:189: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.189     { pop$
+                 "" }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:195: Extra }, or forgotten $.
+l.195     { pop$ "" }
+                     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:196: Undefined control sequence.
+l.196     { "\emph
+                  {" swap$ * "}" * }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:196: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.196     { "\emph{" swap$
+                           * "}" * }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:196: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.196     { "\emph{" swap$
+                           * "}" * }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:198: Extra }, or forgotten $.
+l.198 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:200: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.200 { duplicate$
+                   empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:201: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.201     { pop$
+                 "" }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:202: Undefined control sequence.
+l.202     { "\textbf
+                    {" swap$ * "}" * }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:202: Extra }, or forgotten $.
+l.202     { "\textbf{" swap$ * "}
+                                 " * }
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:202: Extra }, or forgotten $.
+l.202     { "\textbf{" swap$ * "}" * }
+                                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:206: You can't use `macro parameter character #' in horizontal mode.
+l.206 { duplicate$ text.length$ #
+                                 3 <
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (84.02968pt too wide) in paragraph at lines 144--212
+[]\tenrm FUNCTION not   0   1  if$\teni FUNCTION[][]$  \tenrm pop$0\teni if$  \tenrm FUNC-TION or   pop$1[]\teni skip$ \tenrm if$\teni FUNCTION[][]$|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (101.63031pt too wide) in paragraph at lines 144--212
+\tenrm 'skip$[]\teni new:blockif$  \tenrm FUNC-TION new.block.checkb  empty$\teni swap$ \tenrm empty$\teni and[]skip$ \tenrm 'new.block if$\teni FUNCTION[][]$|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm '
+.\tenrm s
+.\tenrm k
+.\tenrm i
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (121.02866pt too wide) in paragraph at lines 144--212
+\tenrm 'skip$[]\teni new:sentenceif$  \tenrm FUNC-TION new.sentence.checkb  empty$\teni swap$ \tenrm empty$\teni and[]skip$ \tenrm 'new.sentence if$\teni FUNCTION[][]$|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm '
+.\tenrm s
+.\tenrm k
+.\tenrm i
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (27.63583pt too wide) in paragraph at lines 144--212
+\tenrm empty$[]$ ""  'skip$\teni if$  \tenrm FUNC-TION em-pha-size  duplicate$\teni empty$  \tenrm pop$""[]$ * "" *  if$\teni FUNCTION[][]$|
+
+\hbox(7.5+1.94444)x469.75499, glue set - 1.0
+.\tenrm e
+.\tenrm m
+.\tenrm p
+.\tenrm t
+.\kern-0.27779
+.etc.
+
+./naturemag.bst:217: Extra }, or forgotten $.
+l.217 { " " swap$ * " " * }
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:223: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.223 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(643.20255+1.94444)x469.75499
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x469.75499, glue set 0.19579
+..\tenrm A
+..\tenrm s
+..\tenrm t
+..\tenrm r
+..\tenrm o
+..etc.
+.\glue(\baselineskip) 3.11111
+.\hbox(6.94444+1.94444)x469.75499, glue set 0.86943
+..\tenrm M
+..\tenrm A
+..\kern-0.27779
+..\tenrm C
+..\tenrm R
+..etc.
+.\glue(\baselineskip) 3.11111
+.etc.
+
+ [2]
+./naturemag.bst:588: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.588       pop$
+                 pop$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:590: Extra }, or forgotten $.
+l.590     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:591: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.591     { duplicate$
+                       empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:593: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.593           swap$
+                      pop$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:594: Extra }, or forgotten $.
+l.594         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:595: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.595         { swap$
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:596: Undefined control sequence.
+l.596           "\bibinfo
+                         {" swap$ * "}{" * swap$ * "}" *
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:596: Extra }, or forgotten $.
+l.596           "\bibinfo{" swap$ * "}
+                                      {" * swap$ * "}" *
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:596: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.596           "\bibinfo{" swap$ * "}{" * swap$
+                                                 * "}" *
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:599: Extra }, or forgotten $.
+l.599     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:606: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.606       swap$
+                  "missing " swap$ * " in " * cite$ * warning$ pop$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:614: Undefined control sequence.
+l.614           "\bibinfo
+                         {" swap$ * "}{" * swap$ * "}" *
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:614: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.614           "\bibinfo{" swap$
+                                  * "}{" * swap$ * "}" *
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:614: Extra }, or forgotten $.
+l.614 ...    "\bibinfo{" swap$ * "}{" * swap$ * "}
+                                                  " *
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:615: Extra }, or forgotten $.
+l.615         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:619: Extra }, or forgotten $.
+l.619 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:621: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.621 { eprint duplicate$
+                          empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:623: Undefined control sequence.
+l.623     { "\eprint
+                    "
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:628: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.628       "{" * swap$
+                        * "}" *
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:631: Extra }, or forgotten $.
+l.631 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:633: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.633 { url empty$
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:635: Undefined control sequence.
+l.635     { "\urlprefix
+                       \url{" url * "}" * }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:635: Undefined control sequence.
+l.635     { "\urlprefix\url
+                           {" url * "}" * }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:637: Extra }, or forgotten $.
+l.637 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:638: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.638 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (24.5817pt too wide) in paragraph at lines 584--638
+[]\tenrm FUNCTION bib-info.check  swap$\teni duplicate$ \tenrm missing$[]$ pop$""[]$ empty$[]$ pop$[]$ "" swap$\tensy ^^C\tenrm "[]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+./naturemag.bst:647: You can't use `macro parameter character #' in math mode.
+l.647   #
+         1 'nameptr :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:648: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.648   s num.names$
+                     'numnames :=
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:650: You can't use `macro parameter character #' in horizontal mode.
+l.650     { namesleft #
+                       0 > }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:656: You can't use `macro parameter character #' in math mode.
+l.656       nameptr #
+                     1 >
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:658: You can't use `macro parameter character #' in math mode.
+l.658           nameptr #
+                         1
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:659: You can't use `macro parameter character #' in math mode.
+l.659           #
+                 1 + =
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:660: You can't use `macro parameter character #' in math mode.
+l.660           numnames #
+                          5
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:663: You can't use `macro parameter character #' in math mode.
+l.663               #
+                     1 'namesleft := }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:664: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.664             'skip$
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:666: You can't use `macro parameter character #' in math mode.
+l.666           namesleft #
+                           1 >
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:669: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.669               s nameptr "{ll}" format.name$
+                                                  duplicate$ "others" =
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:671: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.671                 { pop$
+                             }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:684: Extra }, or forgotten $.
+l.684         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:687: You can't use `macro parameter character #' in horizontal mode.
+l.687       nameptr #
+                     1 + 'nameptr :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:688: You can't use `macro parameter character #' in horizontal mode.
+l.688       namesleft #
+                       1 - 'namesleft :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:691: Extra }, or forgotten $.
+l.691   }
+          if$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:692: Too many }'s.
+l.692 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./naturemag.bst:701: You can't use `macro parameter character #' in math mode.
+l.701 { editor num.names$ #
+                           1 > 'bbl.editors 'bbl.editor if$ }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (31.90262pt too wide) in paragraph at lines 642--702
+\tenrm 'num-names := num-names 'namesleft :=  namesleft 0 >   s nameptr "vv ll, f., jj" format.name$\teni bibinfobibinfo:check[]t \tenrm :=|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm '
+.\tenrm n
+.\kern-0.27779
+.\tenrm u
+.\tenrm m
+.etc.
+
+
+Overfull \hbox (116.80441pt too wide) in paragraph at lines 642--702
+\teni nameptr\tenrm 1 \teni > []$ \tenrm if$\teni namesleft\tenrm 1 \teni > [][]$|
+
+\hbox(8.93452+1.94444)x469.75499, glue set - 1.0
+.\teni n
+.\teni a
+.\teni m
+.\teni e
+.\teni p
+.etc.
+
+[3]
+./naturemag.bst:708: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.708    "(" swap$
+                   * ")" *
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:712: Extra }, or forgotten $.
+l.712 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:715: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.715  note empty$
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:717: You can't use `macro parameter character #' in horizontal mode.
+l.717     { note #
+                  1 #1 substring$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:717: You can't use `macro parameter character #' in horizontal mode.
+l.717     { note #1 #
+                     1 substring$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:723: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.723         if$
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:725: Extra }, or forgotten $.
+l.725         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:727: You can't use `macro parameter character #' in horizontal mode.
+l.727       note #
+                  2 global.max$ substring$ * "note" bibinfo.check
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:730: Extra }, or forgotten $.
+l.730 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:731: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.731 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (3.28706pt too wide) in paragraph at lines 703--731
+[]\tenrm FUNCTION for-mat.editors  ed-i-tor "ed-i-tor" for-mat.names duplicate$\teni empty$ \tenrm 'skip$[]$|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (85.57884pt too wide) in paragraph at lines 703--731
+\tenrm * ")" * *  if$\teni FUNCTION[][]$  \tenrm ""   note 1 1 substring$\teni duplicate$ \tenrm "" = 'skip$[]$|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm *
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm "
+.\tenrm )
+.\tenrm "
+.etc.
+
+./naturemag.bst:735: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.735     { "t" change.case$
+                             }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:738: Extra }, or forgotten $.
+l.738 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:740: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.740 { newline$
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:741: Undefined control sequence.
+l.741   "\bibitem
+                 {" write$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:743: Extra }, or forgotten $.
+l.743   "}
+          " write$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:747: Extra }, or forgotten $.
+l.747 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:748: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.748 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (97.76385pt too wide) in paragraph at lines 732--748
+[]\tenrm FUNCTION for-mat.title  ti-tle duplicate$\teni empty$ \tenrm 'skip$[]$  if$"\teni title\tenrm "\teni bibinfo:checkFUNCTION[][]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+./naturemag.bst:753: Extra }, or forgotten $.
+l.753     { t empty$ not }
+                          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:754: You can't use `macro parameter character #' in math mode.
+l.754     { t #
+               1 #1 substring$ "-" =
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:754: You can't use `macro parameter character #' in math mode.
+l.754     { t #1 #
+                  1 substring$ "-" =
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:754: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.754     { t #1 #1 substring$
+                               "-" =
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:755: You can't use `macro parameter character #' in horizontal mode.
+l.755         { t #
+                   1 #2 substring$ "--" = not
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:755: You can't use `macro parameter character #' in horizontal mode.
+l.755         { t #1 #
+                      2 substring$ "--" = not
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:757: You can't use `macro parameter character #' in math mode.
+l.757               t #
+                       2 global.max$ substring$ 't :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:757: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.757               t #2 global.max$
+                                     substring$ 't :=
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:758: Extra }, or forgotten $.
+l.758             }
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:759: You can't use `macro parameter character #' in math mode.
+l.759             {   { t #
+                           1 #1 substring$ "-" = }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:759: You can't use `macro parameter character #' in math mode.
+l.759             {   { t #1 #
+                              1 substring$ "-" = }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:759: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.759             {   { t #1 #1 substring$
+                                           "-" = }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:759: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.759             {   { t #1 #1 substring$
+                                           "-" = }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:761: You can't use `macro parameter character #' in horizontal mode.
+l.761                   t #
+                           2 global.max$ substring$ 't :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:764: Extra }, or forgotten $.
+l.764             }
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:767: You can't use `macro parameter character #' in horizontal mode.
+l.767         { t #
+                   1 #1 substring$ *
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:767: You can't use `macro parameter character #' in horizontal mode.
+l.767         { t #1 #
+                      1 substring$ *
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:768: You can't use `macro parameter character #' in math mode.
+l.768           t #
+                   2 global.max$ substring$ 't :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:769: Extra }, or forgotten $.
+l.769         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:773: Extra }, or forgotten $.
+l.773 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:774: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.774 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (31.72899pt too wide) in paragraph at lines 749--774
+[]\tenrm FUNCTION n.dashify  't := ""  t empty$\teni not[]$ \tenrm "-" =  t 1 2 substring$" \tensy ^^@ ^^@\tenrm " = \teni not[]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+./naturemag.bst:788: Extra }, or forgotten $.
+l.788     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:789: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.789     { swap$
+                  'skip$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:791: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.791           swap$
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:793: Extra }, or forgotten $.
+l.793         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:803: Extra }, or forgotten $.
+l.803     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:817: Extra }, or forgotten $.
+l.817 ...wap$ * " fields in " * cite$ * warning$ }
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:826: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.826       duplicate$
+                       empty$ 'pop$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:831: Extra }, or forgotten $.
+l.831     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:836: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.836     { number empty$
+                         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:843: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.843           if$
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:849: Extra }, or forgotten $.
+l.849     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:854: Extra }, or forgotten $.
+l.854 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:855: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.855 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (3.97476pt too wide) in paragraph at lines 779--855
+\tenrm fore.all 'out-put.state := " (" swap$\tensy ^^C\tenrm ")" \tensy ^^C \teni if$  \tenrm FUNC-TION for-mat.btitle  ti-tle "ti-tle" bib-info.check duplicate$\teni empty$|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm f
+.\tenrm o
+.\tenrm r
+.\tenrm e
+.\tenrm .
+.etc.
+
+
+Overfull \hbox (221.84137pt too wide) in paragraph at lines 779--855
+\tenrm warning$\teni if$  \tenrm FUNC-TION for-mat.bvolume  vol-ume empty$[][]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm w
+.\kern-0.27779
+.\tenrm a
+.\tenrm r
+.\tenrm n
+.etc.
+
+
+Overfull \hbox (6.04025pt too wide) in paragraph at lines 779--855
+\tenrm empty$[]\teni pop$  \tenrm swap$\teni bbl:ofspace:word \tensy ^^C \teni swap$ \tenrm em-pha-size *  if$"\teni volumeandnumber\tenrm "\teni numbereither:or:checkif$  \tenrm FUNC-|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm e
+.\tenrm m
+.\tenrm p
+.\tenrm t
+.\kern-0.27779
+.etc.
+
+
+Overfull \hbox (329.2093pt too wide) in paragraph at lines 779--855
+\tenrm TION for-mat.number.series  vol-ume empty$[]$  se-ries field.or.null   se-ries empty$[][]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm T
+.\tenrm I
+.\tenrm O
+.\tenrm N
+.\glue 3.33333 plus 1.66498 minus 1.11221
+.etc.
+
+./naturemag.bst:862: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.862       if$
+                change.case$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:865: Extra }, or forgotten $.
+l.865     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:871: You can't use `macro parameter character #' in horizontal mode.
+l.871   #
+         0 'multiresult :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:875: Extra }, or forgotten $.
+l.875     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:876: You can't use `macro parameter character #' in math mode.
+l.876     { t #
+               1 #1 substring$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:876: You can't use `macro parameter character #' in math mode.
+l.876     { t #1 #
+                  1 substring$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:876: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.876     { t #1 #1 substring$
+                              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:881: You can't use `macro parameter character #' in horizontal mode.
+l.881         { #
+                 1 'multiresult := }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:882: You can't use `macro parameter character #' in horizontal mode.
+l.882         { t #
+                   2 global.max$ substring$ 't := }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:884: Extra }, or forgotten $.
+l.884     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:890: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.890     { duplicate$
+                       multi.page.check
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:898: Extra }, or forgotten $.
+l.898     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:903: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.903     { swap$
+                  duplicate$ empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:911: Extra }, or forgotten $.
+l.911         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:915: Extra }, or forgotten $.
+l.915 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:918: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.918   duplicate$
+                   empty$ 'skip$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:925: Extra }, or forgotten $.
+l.925 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:926: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.926 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (125.82678pt too wide) in paragraph at lines 856--926
+[]\tenrm FUNCTION for-mat.edition  edi-tion duplicate$\teni empty$ \tenrm 'skip$[]$ change.case$"\teni edition\tenrm "\teni bibinfo:check\tenrm "" \tensy ^^C|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (27.652pt too wide) in paragraph at lines 856--926
+\tenrm pages duplicate$\teni empty$ \tenrm 'pop$[]$ duplicate$\teni empty$  \tenrm pop$\teni pop$ \tenrm for-mat.pages   ", " * swap$\teni n:dashify\tenrm "\teni pages\tenrm "\teni bibinfo:check \tensy ^^C|
+
+\hbox(7.5+1.94444)x469.75499, glue set - 1.0
+.\tenrm p
+.\tenrm a
+.\tenrm g
+.\tenrm e
+.\tenrm s
+.etc.
+
+./naturemag.bst:930: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.930     { type empty$
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:934: Extra }, or forgotten $.
+l.934         }
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:943: Extra }, or forgotten $.
+l.943     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:955: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.955 ...ditor "editor" format.names.ed duplicate$
+                                                   empty$ 'pop$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:966: Extra }, or forgotten $.
+l.966 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:968: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.968 { author empty$
+                      title empty$ howpublished empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:971: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.971 ..."all relevant fields are empty in " cite$
+                                                   * warning$ }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:971: Extra }, or forgotten $.
+l.971 ... fields are empty in " cite$ * warning$ }
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:974: Extra }, or forgotten $.
+l.974 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:976: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.976 { type duplicate$
+                        empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:980: Extra }, or forgotten $.
+l.980     }
+           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:986: Extra }, or forgotten $.
+l.986     { pop$ bbl.techrep }
+                              
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:994: Extra }, or forgotten $.
+l.994 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:997: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.997   key duplicate$
+                       empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:998: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.998     { pop$
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1001: Extra }, or forgotten $.
+l.1001 ...ibinfo.check emphasize word.in swap$ * }
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1004: Extra }, or forgotten $.
+l.1004     { word.in swap$ * " " *}
+                                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1006: Undefined control sequence.
+l.1006   " \cite
+                {" * crossref * "}" *
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1009: You can't use `macro parameter character #' in horizontal mode.
+l.1009 { editor #
+                 1 "{vv~}{ll}" format.name$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1012: You can't use `macro parameter character #' in math mode.
+l.1012   #
+          2 >
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1013: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1013     { pop$
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1019: You can't use `macro parameter character #' in horizontal mode.
+l.1019     { #
+              2 <
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1021: You can't use `macro parameter character #' in math mode.
+l.1021         { editor #
+                         2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1021: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1021 ...or #2 "{ff }{vv }{ll}{ jj}" format.name$
+                                                   "others" =
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1030: You can't use `macro parameter character #' in horizontal mode.
+l.1030               * editor #
+                               2 "{vv~}{ll}" format.name$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1033: Extra }, or forgotten $.
+l.1033             }
+                    
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1037: Extra }, or forgotten $.
+l.1037     }
+            
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1044: Extra }, or forgotten $.
+l.1044     }
+            
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1047: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1047       swap$
+                   tie.or.space.prefix "volume" bibinfo.check * * bbl.of spa...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1054: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1054         { series empty$
+                              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1061: Extra }, or forgotten $.
+l.1061         }
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1067: Undefined control sequence.
+l.1067   " \cite
+                {" * crossref * "}" *
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1068: Extra }, or forgotten $.
+l.1068 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1071: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1071   editor empty$
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1075: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1075         { format.booktitle duplicate$
+                                             empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1076: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1076 ...ed editor, key, or booktitle for " cite$
+                                                   * " to crossref " *
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1078: Extra }, or forgotten $.
+l.1078             }
+                    
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1079: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1079             { word.in swap$
+                                   * }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1081: Extra }, or forgotten $.
+l.1081         }
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1087: Undefined control sequence.
+l.1087   " \cite
+                {" * crossref * "}" *
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1088: Extra }, or forgotten $.
+l.1088 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1092: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1092   year empty$
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1105: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1105           address empty$
+                               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1113: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1113         { t empty$
+                          address empty$ and
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1119: Extra }, or forgotten $.
+l.1119         }
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1124: Extra }, or forgotten $.
+l.1124 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1128: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.1128 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.63284pt too wide) in paragraph at lines 947--1128
+[]\tenrm FUNCTION for-mat.booktitle  book-ti-tle "book-ti-tle" bib-info.check em-pha-size  FUNC-TION for-mat.in.ed.booktitle|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (6.82458pt too wide) in paragraph at lines 947--1128
+\tenrm for-mat.booktitle duplicate$\teni empty$ \tenrm 'skip$[]$ empty$[]\teni pop$  \tenrm " " * get.bbl.editor|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm f
+.\tenrm o
+.\tenrm r
+.\discretionary
+..\tenrm -
+.\tenrm m
+.etc.
+
+
+Overfull \hbox (46.11461pt too wide) in paragraph at lines 947--1128
+\tenrm "(" swap$\tensy ^^C\tenrm ")" \tensy ^^C ^^C\teni swap$ \tenrm *  if$\teni word:inswap$ \tenrm *  if$\teni FUNCTION[][]$ \tenrm ti-tle empty$\teni howpublishedempty$|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm "
+.\tenrm (
+.\tenrm "
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm s
+.etc.
+
+
+Overfull \hbox (136.50096pt too wide) in paragraph at lines 947--1128
+\tenrm if$"\teni type\tenrm "\teni bibinfo:checkswap$ \tenrm duplicate$\teni empty$  \tenrm pop$"\teni t\tenrm "\teni change:case$   \tenrm tie.or.space.prefix * *  if$\teni FUNCTION[][]$|
+
+\hbox(7.5+1.94444)x469.75499, glue set - 1.0
+.\tenrm i
+.\tenrm f
+.\mathon
+.\tenrm "
+.\teni t
+.etc.
+
+
+Overfull \hbox (0.25226pt too wide) in paragraph at lines 947--1128
+\teni crossref \tensy ^^C \teni warning$ \tenrm pop$\teni word:in[]$ \tenrm tie.or.space.prefix "vol-ume" bib-info.check * * bbl.of|
+
+\hbox(7.5+1.94444)x469.75499, glue set - 1.0
+.\teni c
+.\teni r
+.\kern0.27779
+.\teni o
+.\teni s
+.etc.
+
+
+Overfull \hbox (35.87448pt too wide) in paragraph at lines 947--1128
+\tenrm field.or.null au-thor field.or.null = or  key empty$[]$ empty$[]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm ^^L (ligature fi)
+.\tenrm e
+.\tenrm l
+.\tenrm d
+.\tenrm .
+.etc.
+
+
+Overfull \hbox (86.32051pt too wide) in paragraph at lines 947--1128
+\tenrm 'skip$\teni if$ \tenrm ad-dress empty$\teni tempty$ \tenrm and year empty$\teni and[]skip$  \tenrm add.blank "(" * t empty$[][]$|
+
+\hbox(7.51782+2.5)x469.75499, glue set - 1.0
+.\tenrm '
+.\tenrm s
+.\tenrm k
+.\tenrm i
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (92.53374pt too wide) in paragraph at lines 947--1128
+\tenrm 'skip$[]\teni if$  \tenrm if$\teni yearempty$ \tenrm 'skip$[]$ ad-dress empty$\teni and[]skip$  \tenrm ", " *  if$\teni year\tenrm "\teni year\tenrm "\teni bibinfo:check \tensy ^^C|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm '
+.\tenrm s
+.\tenrm k
+.\tenrm i
+.\tenrm p
+.etc.
+
+[4]
+./naturemag.bst:1167: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1167       crossref missing$
+                              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1195: Extra }, or forgotten $.
+l.1195 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1212: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.1212 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (571.51842pt too wide) in paragraph at lines 1133--1212
+\tenrm out-put.check new.block cross-ref missing$[][]\teni if$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm o
+.\tenrm u
+.\tenrm t
+.\discretionary
+..\tenrm -
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (117.40446pt too wide) in paragraph at lines 1133--1212
+\tenrm out-put.bibitem au-thor empty$[][]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm o
+.\tenrm u
+.\tenrm t
+.\discretionary
+..\tenrm -
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (14.16388pt too wide) in paragraph at lines 1133--1212
+\tenrm "au-thor and ed-i-tor" ed-i-tor ei-ther.or.check  'skip$\teni if$  \tenrm if$\teni new:blockformat:btitle\tenrm "\teni title\tenrm "\teni output:checkcrossrefmissing$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm "
+.\tenrm a
+.\tenrm u
+.\discretionary
+..\tenrm -
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (1716.53923pt too wide) in paragraph at lines 1133--1212
+\tenrm put   new.block for-mat.book.crossref out-put.nonnull for-mat.date "year" out-put.check  if$\teni format:editionoutputnew:blockformat:urloutputnew:blockformat:noteoutputformat:eprintoutputfin:entryFUNCTION[][]$ |
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm p
+.\tenrm u
+.\tenrm t
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+./naturemag.bst:1219: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1219       crossref missing$
+                              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1250: Extra }, or forgotten $.
+l.1250 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1251: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.1251 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (185.62106pt too wide) in paragraph at lines 1213--1251
+[]\tenrm FUNCTION in-book  out-put.bibitem au-thor empty$[][]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (14.16388pt too wide) in paragraph at lines 1213--1251
+\tenrm "au-thor and ed-i-tor" ed-i-tor ei-ther.or.check  'skip$\teni if$  \tenrm if$\teni new:blockformat:btitle\tenrm "\teni title\tenrm "\teni output:checkcrossrefmissing$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm "
+.\tenrm a
+.\tenrm u
+.\discretionary
+..\tenrm -
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (9.82933pt too wide) in paragraph at lines 1213--1251
+\tenrm for-mat.bvolume out-put for-mat.chapter.pages "chap-ter and pages" out-put.check new.block for-mat.number.series|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm f
+.\tenrm o
+.\tenrm r
+.\discretionary
+..\tenrm -
+.\tenrm m
+.etc.
+
+
+Overfull \hbox (4.6348pt too wide) in paragraph at lines 1213--1251
+\tenrm out-put new.sentence for-mat.publisher.address out-put   for-mat.chapter.pages "chap-ter and pages" out-put.check|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm o
+.\tenrm u
+.\tenrm t
+.\discretionary
+..\tenrm -
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (361.87047pt too wide) in paragraph at lines 1213--1251
+\tenrm new.block for-mat.book.crossref out-put.nonnull for-mat.date "year" out-put.check  if$\teni format:editionoutputnew:blockformat:urloutputnew:blockformat:noteoutputformat:eprintoutputfin:entry$ |
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm n
+.\tenrm e
+.\tenrm w
+.\tenrm .
+.\tenrm b
+.etc.
+
+./naturemag.bst:1290: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1290       publisher empty$
+                             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1296: Extra }, or forgotten $.
+l.1296     }
+            
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1313: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1313       duplicate$
+                        empty$ 'pop$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1318: Extra }, or forgotten $.
+l.1318     }
+            
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1324: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1324     { organization empty$
+                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1346: Extra }, or forgotten $.
+l.1346 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1347: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.1347 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (920.84941pt too wide) in paragraph at lines 1252--1347
+\tenrm "ti-tle" out-put.check new.block cross-ref missing$[][]\teni if$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm "
+.\tenrm t
+.\tenrm i
+.\discretionary
+..\tenrm -
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (292.69492pt too wide) in paragraph at lines 1252--1347
+\tenrm new.block cross-ref missing$[]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm n
+.\tenrm e
+.\tenrm w
+.\tenrm .
+.\tenrm b
+.etc.
+
+
+Overfull \hbox (9.635pt too wide) in paragraph at lines 1252--1347
+\tenrm for-mat.organization.address out-put   or-ga-ni-za-tion "or-ga-ni-za-tion" bib-info.check out-put for-mat.publisher.address|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm f
+.\tenrm o
+.\tenrm r
+.\discretionary
+..\tenrm -
+.\tenrm m
+.etc.
+
+
+Overfull \hbox (301.65852pt too wide) in paragraph at lines 1252--1347
+\tenrm out-put ad-dress "ad-dress" bib-info.check out-put  if$\teni format:editionoutputformat:dateoutputnew:blockformat:urloutputnew:blockformat:noteoutputformat:eprintoutputfin:entry$ |
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm o
+.\tenrm u
+.\tenrm t
+.\discretionary
+..\tenrm -
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (4.41154pt too wide) in paragraph at lines 1348--1366
+[]\tenrm FUNCTION mas-ter-s-the-sis  out-put.bibitem for-mat.authors "au-thor" out-put.check new.block for-mat.btitle|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+./naturemag.bst:1414: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1414     { publisher empty$
+                             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1440: Extra }, or forgotten $.
+l.1440 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1441: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.1441 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (142.26247pt too wide) in paragraph at lines 1402--1441
+[]\tenrm FUNCTION pro-ceed-ings  out-put.bibitem ed-i-tor empty$[][]\teni if$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (72.48764pt too wide) in paragraph at lines 1402--1441
+\tenrm new.block for-mat.btitle "ti-tle" out-put.check for-mat.bvolume out-put for-mat.number.series out-put ed-i-tor empty$[]$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm n
+.\tenrm e
+.\tenrm w
+.\tenrm .
+.\tenrm b
+.etc.
+
+
+Overfull \hbox (483.30669pt too wide) in paragraph at lines 1402--1441
+\tenrm 'skip$[]\teni if$   \tenrm pub-lisher empty$[][]\teni if$|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm '
+.\tenrm s
+.\tenrm k
+.\tenrm i
+.\tenrm p
+.etc.
+
+./naturemag.bst:1481: You can't use `macro parameter character #' in horizontal mode.
+l.1481   #
+          1 'number.label :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1482: You can't use `macro parameter character #' in horizontal mode.
+l.1482   #
+          0 'longest.label.width :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1486: You can't use `macro parameter character #' in math mode.
+l.1486   number.label #
+                       1 + 'number.label :=
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1490: Extra }, or forgotten $.
+l.1490     }
+            
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1493: Extra }, or forgotten $.
+l.1493 }
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1497: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1497 { preamble$
+                   empty$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./naturemag.bst:1499: Extra }, or forgotten $.
+l.1499     { preamble$ write$ newline$ }
+                                        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1501: Undefined control sequence.
+l.1501   "\begin
+                {thebibliography}{"  longest.label  * "}" *
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1509: Undefined control sequence.
+l.1509   "\providecommand
+                         {\bibinfo}[2]{#2}"
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1509: Undefined control sequence.
+l.1509   "\providecommand{\bibinfo
+                                  }[2]{#2}"
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1509: You can't use `macro parameter character #' in horizontal mode.
+l.1509   "\providecommand{\bibinfo}[2]{#
+                                        2}"
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1511: Undefined control sequence.
+l.1511   "\providecommand
+                         {\eprint}[2][]{\url{#2}}"
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1511: Undefined control sequence.
+l.1511   "\providecommand{\eprint
+                                 }[2][]{\url{#2}}"
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1511: Undefined control sequence.
+\url #1->\texttt 
+                 {#1}
+l.1511   "\providecommand{\eprint}[2][]{\url{#2}
+                                                }"
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./naturemag.bst:1511: You can't use `macro parameter character #' in horizontal mode.
+<argument> ##
+             2
+\url #1->\texttt {#1
+                    }
+l.1511   "\providecommand{\eprint}[2][]{\url{#2}
+                                                }"
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./naturemag.bst:1516: Extra }, or forgotten $.
+<recently read> }
+                 
+l.1516 ITERATE {call.type$}
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./naturemag.bst:1518: Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+l.1518 { newline$
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (25.29482pt too wide) in paragraph at lines 1475--1519
+[]\tenrm FUNCTION de-fault.type  misc  READ STRINGS  longest.label  IN-TE-GERS  num-ber.label longest.label.width|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\tenrm U
+.\tenrm N
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (324.6104pt too wide) in paragraph at lines 1475--1519
+\tenrm longest.label.width >  la-bel 'longest.label := la-bel width$[]\teni longest:label:width \tenrm :=[] \teni skip$ \tenrm if$\teni EXECUTE[]ITERATE[]FUNCTION[][]$|
+
+\hbox(7.51782+1.94444)x469.75499, glue set - 1.0
+.\tenrm l
+.\tenrm o
+.\tenrm n
+.\tenrm g
+.\tenrm e
+.etc.
+
+[5] [6] )
+(\end occurred inside a group at level 12)
+
+### simple group (level 12) entered at line 1516 ({)
+### simple group (level 11) entered at line 1488 ({)
+### simple group (level 10) entered at line 1485 ({)
+### simple group (level 9) entered at line 984 ({)
+### simple group (level 8) entered at line 928 ({)
+### simple group (level 7) entered at line 902 ({)
+### simple group (level 6) entered at line 870 ({)
+### simple group (level 5) entered at line 815 ({)
+### simple group (level 4) entered at line 780 ({)
+### simple group (level 3) entered at line 750 ({)
+### simple group (level 2) entered at line 741 ({)
+### simple group (level 1) entered at line 717 ({)
+### bottom level</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on "/Users/Amfortas/Google Drive/workspace/snowball in pops/.texpadtmp/naturemag.pdf" (6 pages, 75564 bytes).
+PDF statistics:
+ 39 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

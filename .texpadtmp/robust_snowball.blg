@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/Amfortas/Google Drive/workspace/Ricardo/snowball in pops/.texpadtmp/robust_snowball.aux
+The style file: ../vancouver-elife.bst
+Database file #1: ../library.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 16 entries,
+            3492 wiz_defined-function locations,
+            875 strings with 10197 characters,
+and the built_in function-call counts, 40930 in all, are:
+= -- 5314
+> -- 376
+< -- 7
++ -- 216
+- -- 120
+* -- 3685
+:= -- 4501
+add.period$ -- 64
+call.type$ -- 16
+change.case$ -- 124
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 3891
+empty$ -- 3635
+format.name$ -- 160
+if$ -- 9351
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 188
+newline$ -- 102
+num.names$ -- 48
+pop$ -- 330
+preamble$ -- 1
+purify$ -- 124
+quote$ -- 0
+skip$ -- 272
+stack$ -- 0
+substring$ -- 7341
+swap$ -- 445
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 144
+warning$ -- 0
+while$ -- 183
+width$ -- 0
+write$ -- 258

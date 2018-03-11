@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ELIFE ARTICLE TEMPLATE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PREAMBLE
+\documentclass[9pt,lineno]{elife}
+% Use the onehalfspacing option for 1.5 line spacing
+% Use the doublespacing option for 2.0 line spacing
+% Please note that these options may affect formatting.
+
+\usepackage{lipsum} % Required to insert dummy text
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\DeclareSIUnit\Molar{M}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ARTICLE SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Robustness and the evolution of genetic incompatibilities: insights from a RNA model}
+
+\author[1]{Ata Kalirad}
+\author[2,*]{Ricardo B. R. Azevedo}
+
+
+\affil[1]{School of Biological Science, Institute for Research in Fundamental Sciences (IPM), Iran}
+\affil[2]{Department of Biology and Biochemistry, University of Houston, Houston, Texas, United States of America}
+
+\corr{razevedo@uh.edu}{}
+
+
+%\presentadd[\authfn{3}]{Department, Institute, Country}
+%\presentadd[\authfn{4}]{Department, Institute, Country}
+% \presentadd[\authfn{5}]{eLife Sciences editorial Office, eLife Sciences, Cambridge, United Kingdom}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ARTICLE START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section*{Introduction} 
+The genetics of speciation has been generally ascribed to the negative epistasis between, otherwise benign, alleles at different loci in the hybrids \citep[reviewed in][]{Maheshwari2011}. In this view, neutral or adaptive mutations arise and fix in different lineages independently, and such accumulation makes it more likely for mutations from different lineages to be incompatible with each other \citep{Orr1995}. Assuming that populations are monomorphic during there evolution, as in strong selection weak mutation (SSWM) regime,  is a valid approach to simulate evolution as a series of beneficial mutations going to fixation \citep{Sniegowski2010}, but it can be problematic in understanding speciation between lineages, since it neglects the possible effect of population dynamic on the emergence of incompatibilities. Recent studies have presented us with an inconvenient and yet intriguing reality: incompatibilities are segregating within species \citep{Seidel2008, Corbett-Detig2013, Hou2014, Chae2014}. \\
+
+Here, we present a individual-based model to investigate how population dynamics may affect the accumulation of incompatibilities between two evolving lineages.
+
+\section*{Results}
+
+\subsection{The accumulation of DMIs declines as recombination load increases} 
+
+\subsection{Higher mutation rate results in fewer incompatibilities}
+
+\section*{Discussion}
+\emph{Mutational robustness} can be defined as the ability of a phenotype to be viable in the face of mutations \citep{Gardner2006}. Using digital organisms, \citet{Misevic2006} show that sexual populations become more insensitive to mutation, i.e., they are more robust, than asexual populations. \citet{Gardner2006} also predict that increasing recombination rate results in an increased robustness. The link between robustness and recombination stems from the fact that recombination can result in selection for ``mixability'', i.e., selection for mutations that can perform well in a variety of genetic backgrounds \citep{Livnat2008, Azevedo2006}. \citet{Lohaus2010} show that, at least in artificial gene networks, recombination in can result in selection for mixable genotypes. This selection for mixability should, by definition, inhibit the development of incompatibilities between genotypes. \\
+
+In addition, the fact that asexual individual-based simulations with lower mutations rates accumulate more DMIs when compared to simulations with higher mutation rates further supports the veracity of the robustness hypothesis. \\
+
+Given the negative relation between number of DMIs and the recombination rate, it is plausible that at the genomic level, where the recombination rate is not homogenous \citep{Myers2005}, suppression of recombination rate in regions of the genome can make them more likely to be involved in an incompatibility. Although such reasoning has been suggested for recombination between populations \citep{Nosil2012}, to my knowledge, this mechanism linking the suppression of recombination to the emergence of incompatibilities has not been proposed before. \\
+
+The effect of recombination on robustness and, consequently, on the accumulation of incompatibilities means that one should be cautious when dealing with a theoretical/computation model that does not take recombination into account. In the absence of recombination, an asexual model would result in an overestimation of the number of incompatibilities and high level of RI. In the presence of recombination, selection for mixability would reduce the number of DMIs accumulated over divergence, a fact that is absent from an asexual theoretical/computation model. The higher levels of RI observed in an asexual model may also be misleading since in populations with low recombination only a few hybrids would actually experience low fitness.
+
+\section*{Materials and Methods}
+
+\subsection{The individual-based model}
+
+We start from a random $100$ nucleotide RNA sequence, henceforth referred to as the reference sequence. The fitness of any RNA sequence during simulation is calculated relative to the reference sequence, according to Equation \ref{eq:fitness}. The reference sequence undergoes $200$ random neutral substitutions in succession. The resulting sequence is used as the ancestral sequence. The ancestral population consists of $N$ individual ancestral sequences, where $N$ is the population size. All the results presented in this section are based on $1000$ simulations, $\alpha = 12$, and population size of $N=1000$.
+
+\subsection{Fitness} 
+
+In our model, fitness is defined as:
+
+\begin{equation}
+	w_{i} = \left\{\begin{array}{ll}
+    		1 & \quad  \mathrm{if}  \quad  \delta \leqslant \alpha\\
+			0 & \quad  \mathrm{otherwise}   \\
+			\end{array}\right.
+\label{eq:fitness}
+\end{equation} 
+
+where $\delta$ is the Hamming distance between matrix $i$ and our reference sequecne, and $\alpha$ is an arbitrary cutoff.
+
+\subsection{Mutation}
+
+Mutations arise according a Bernoulli process where each site mutates according to the mutation rate per site per generation ($u$). All types of base-substitution mutations have equal probability.  Insertions and deletions are not considered.
+
+\subsection{Recombination}
+
+For a population of size $N$, we randomly sample two sets of $N$ sequences with replacement from the population and generate $N$ recombinants. Two genotypes can undergo as many as $L-1$ crossover events between each other with probability $r$ per interval. $r$ can vary from $0$ (i.e., no recombination events) to $0.5$ (i.e., free recombination between all loci). If no crossovers have taken place, the parental sequences are allowed to mutate, and then moved to the next generation.
+
+\subsection{Divergence}
+
+The ancestral sequence is used to found two identical haploid populations. At each generation, both populations recombine and mutate. After recombination and mutation, I calculate the fitness of each sequence. The next generation is composed of viable genotypes after recombination and mutation.  
+
+\subsection*{Inviable introgressions}
+
+Two viable sequences, 1 and 2, differ at $k$ sites.  To detect DMIs of increasing complexity we conduct introgressions of one, two, or three diverged nucleotides from one sequence to another.
+
+\subsubsection{Single introgressions:}
+We introgress individual nucleotides at each of the $k$ divergent sites from sequence 1 to sequence 2 and count the number of inviable introgressions, $J_{k}^{(1)}$.  We repeat the procedure in the opposite direction (sequence $2\to1$) and calculate the average of the resulting $J_{k}^{(1)}$ values.  The proportion of single introgressions (in one direction) involved in a DMI is given by $\mathcal P_{1} = J_{k}^{(1)} / k$ \citep{Welch2004}.
+
+
+\subsubsection{Double introgressions:}
+We introgress the $i(i-1)/2$ pairs of nucleotides from sequence 1 to sequence 2, where $i = k - J_{k}^{(1)}$ is the number of divergent sites that are not involved in inviable single introgressions in the $1\to 2$ direction.  We count the number of inviable double introgressions, $J_{k}^{(2)}$.  We repeat the procedure in the opposite direction $(2\to1)$ and calculate the average of the resulting $J_{k}^{(2)}$ values.
+
+
+\subsubsection{Triple introgressions:}
+We introgress all triples of divergent nucleotides from sequence 1 to sequence 2 that contain neither nucleotides involved in inviable single introgressions in the $1\to 2$ direction, nor pairs of nucleotides involved in inviable double introgressions in the $1\to 2$ direction.  We count the number of inviable triple introgressions, $J_{k}^{(3)}$.  We repeat the procedure in the opposite direction $(2\to1)$ and calculate the average of the resulting $J_{k}^{(3)}$ values.
+
+\section{Acknowledgments}
+
+
+\nocite{*} % This command displays all refs in the bib file
+\bibliography{library}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APPENDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
