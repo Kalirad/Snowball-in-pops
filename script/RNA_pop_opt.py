@@ -15,6 +15,7 @@ from itertools import *
 
 import numpy as np
 import pandas as pd
+import random as rnd
 
 # ViennaRNA package python bindings
 import RNA as RNA
@@ -153,7 +154,6 @@ np.random.set_state(('MT19937', np.array([
     1297221824, 1938199324, 4112704123, 1741415251, 1105144176,
     1259977468,  131064353, 4036118418,  311279014], dtype=np.uint32),
     624, 0, 0.0))
-
 
 class RNASeq(object):
     """RNA sequence and corresponding minimum free energy (MFE) secondary
@@ -552,7 +552,6 @@ class RNASeq(object):
         assert type(self) == type(other)
         return RNA.bp_distance(self.struct, other.struct)
 
-
 class Population(object):
   
     def __init__(self, seq, pop_size, mut_rate=1e-3, rec_rate=0.0, alpha=12):
@@ -579,7 +578,7 @@ class Population(object):
         self.u = mut_rate
         self.r = rec_rate
         self.burnin()
-        self.population = [self.ancestor for i in range(self.N)] 
+        self.population = np.array([RNASeq.convertor(seq) for i in range(self.N)])
         assert self.ref_seq.bp > self.alpha
         assert type(self.N) == int and self.N > 0
         assert type(self.u) == float and 0 <= self.u <= 1.
@@ -605,70 +604,54 @@ class Population(object):
             self.ancestor = mut
             count += 1
 
-    def get_allele_freqs(self, locus, array= True): # check for rduncency and efficency (2d array, col=loci and rows= allele)
-        if array: 
-            allele_freqs = []
-            for i in RNA_nucl: 
-                p = 0
-                for j in self.population:
-                    if j.seq[locus] == i:
-                        p += 1
-                allele_freqs.append(float(p)/float(len(self.population)))
-            allele_freqs = np.array(allele_freqs)
-        else:
-            allele_freqs = {}
-            for i in RNA_nucl:
-                p = 0
-                for j in self.population:
-                    if j.seq[locus] == i:
-                        p += 1
-                allele_freqs[i] = (float(p)/float(len(self.population)))
-        return allele_freqs
-    
     def get_seq_from_list(self, seqs):
         self.population = []
         for i in (seqs):
             self.population.append(RNASeq(i))
 
+    def get_allele_freqs(self, locus):
+        """Calculate the allele frequency for a given locus.
+        
+        Arguments:
+            locus {int} -- the site for which the allele frequency is to be calculated.
+        
+        Returns:
+            float -- the allele frequncy for locus.
+        """
+        allele_freqs = []
+        unique, counts = np.unique(self.population[:,locus], return_counts=True)
+        allele_freqs = np.divide(counts, float(self.N))
+        return allele_freqs
+    
     @property
-    def gene_diversity(self): #vectorise
-        L = len(self.ancestor.seq)
-        H = np.zeros(L)
-        for i in range(L):
-            H[i] = 1 - np.power(self.get_allele_freqs(i), 2).sum()
+    def gene_diversity(self):
+        """Calculate gene dicersity for the entire sequence.
+        
+        Returns:
+            float -- heterozygosity for the entire sequence.
+        """
+
+        H = np.array([(1 - np.power(self.get_allele_freqs(i), 2).sum()) for i in range(self.ancestor.L)])
         return H
 
     @property
+    def genotypes_dic(self): 
+        """Return a dictionary of genotypes with their respective frequencies.
+        
+        Returns:
+            dic -- the dictionary of genotypes with sequences as keys and frequencies as values.
+        """
+        unique, counts = np.unique(self.population, return_counts=True, axis=0)
+        return dict(zip([RNASeq.convertor(i, inv=True) for i in unique], counts))
+ 
+    @property
     def wt_seq(self):
+        """Get the most common sequence in the population.
+        
+        Returns:
+            string -- the most common sequence.
+        """
         return max(self.genotypes_dic, key=self.genotypes_dic.get)
-
-    '''
-    @property
-    def genotype_freqs(self):
-        freqs = []
-        seqs = [i.seq for i in self.population]
-        for i in self.genotypes:
-            freqs.append(float(seqs.count(i))/float(len(seqs)))
-        return np.array(freqs)
-    '''
-
-    @property
-    def genotypes(self):
-        return set([i.seq for i in self.population])
-
-    # __iq for counting objects in the population
-    # do properties evalute multiple times????
-    @property
-    def genotypes_dic(self): # 
-        dic = {}
-        seqs = [i.seq for i in self.population] 
-        for i in self.genotypes: 
-            dic[i] = float(seqs.count(i))/float(len(seqs))
-        return dic
-
-    @property
-    def pop_bp_distance(self):
-        return np.array([RNA.bp_distance(self.ref_seq.struct, i.struct) for i in self.population])
 
     def is_viable(self, seq):
         """Evaluate whether a sequence is viable
@@ -690,58 +673,31 @@ class Population(object):
             return False
         else:
             bp = RNASeq.get_bp_distance(self.ref_seq, seq)
-            if bp <= self.alpha: # Boolean
-                return 1
+            if bp <= self.alpha:
+                return True
             else:
-                return 0
-    '''
-    def get_pop_hamdist(self, other):
-        assert type(other) == Population
-        seqsA = []
-        seqsB = []
-        dist_A = []
-        dist_B = []
-        dist = []
-        for i in self.genotypes_dic:
-            if self.genotypes_dic[i] >= self.freq_limit:
-                seqsA.append(i)
-        if len(seqsA) == 0:
-            seqsA.append(max(self.genotypes_dic, key=self.genotypes_dic.get))
-        pairs = list(combinations(seqsA, 2))
-        for i in pairs:
-            dist_A.append(RNASeq.get_hamdist(i[0], i[1]))
-        for i in other.genotypes_dic:
-            if other.genotypes_dic[i] >= other.freq_limit:
-                seqsB.append(i)
-        if len(seqsB) == 0:
-            seqsB.append(max(other.genotypes_dic, key=other.genotypes_dic.get))
-        pairs = list(combinations(seqsB, 2))
-        for i in pairs:
-            dist_B.append(RNASeq.get_hamdist(i[0], i[1]))
-        seqs_comb = seqsA + seqsB
-        pairs = list(combinations(seqs_comb, 2))
-        for i in pairs:
-            if (i[0] in seqsA and i[1] in seqsB) or (i[0] in seqsB and i[1] in seqsA):
-                dist.append(RNASeq.get_hamdist(i[0], i[1]))
-        if len(dist_A) or len(dist_B):
-            mean_dist = np.mean(dist_A + dist_B)
-        else:
-            mean_dist = 0
-        return {'dist_within': mean_dist, 'dist_between': np.mean(dist)}
-    '''
+                return False
 
     @staticmethod
-    def get_int_rep(genotypes):
-        return np.array([RNASeq.convertor(i.seq) for i in genotypes])
-
-    @staticmethod
-    def recombine(N, r, pop1, pop2=0):
+    def recombine_pop(r, pop1, pop2=0):
+        """Recombine population(s)>
+        
+        Arguments:
+            r {float} -- recombination rate per site.
+            pop1 {2d numpy array} -- The matrix representation of the population.
+        
+        Keyword Arguments:
+            pop2 {2d numpy array} -- The matrix representation of a second population. (default: {0})
+        
+        Returns:
+            numpy array -- the matrix of recombinant sequences.
+        """
         if type(pop1) == type(pop2):
-            mat_1 = pop1[np.random.randint(pop1.shape[0], size= pop1.shape[0]/2), :]
-            mat_2 = pop2[np.random.randint(pop2.shape[0], size= pop2.shape[0]/2), :]
+            mat_1 = pop1[np.random.randint(pop1.shape[0], size= pop1.shape[0]), :]
+            mat_2 = pop2[np.random.randint(pop2.shape[0], size= pop2.shape[0]), :]
         else:
-            mat_1 = pop1[np.random.randint(pop1.shape[0], size= N/2), :]
-            mat_2 = pop1[np.random.randint(pop1.shape[0], size= N/2), :]
+            mat_1 = pop1[np.random.randint(pop1.shape[0], size= pop1.shape[0]), :]
+            mat_2 = pop1[np.random.randint(pop1.shape[0], size= pop1.shape[0]), :]
         rec_probs = np.random.binomial(1, r, (mat_1.shape[0], mat_1.shape[1] - 1))
         recs = []
         for i,j,k in zip(mat_1, mat_2, rec_probs):
@@ -760,64 +716,68 @@ class Population(object):
                     site += 1
                 recs.append(rec1)
                 recs.append(rec2)
-        return np.array(recs)
-
-    '''
-    @staticmethod
-    def gen_mut_matrix(L, N, u):
-        return np.random.binomial(1, u, (N, L))
-        mut_matrix = np.empty((0, L)) #use np.zeros 
-        while len(mut_matrix) < N:
-            mut = np.random.binomial(1, u, L)
-            #mut_loci = np.where(mut == 1)
-            mut_matrix = np.vstack((mut_matrix, mut))
-        return mut_matrix
-    '''
+        return np.array(recs[:len(pop1)])
 
     @staticmethod
-    def mutate(mat, u, n_alleles=4): 
+    def mutate_pop(pop, u, n_alleles=4): 
+        """Mutate the population.
+        
+        Arguments:
+            pop {2d numpy array} -- The matrix representation of the population.
+            u {float} -- Mutation rate per site.
+        
+        Keyword Arguments:
+            n_alleles {int} -- The number of alleles in this genetic system (default: {4})
+        
+        Returns:
+            2d numpy array -- The mutated population matrix.
         """
-        mat : population matrix
-        u : mutation rate
+
+        mut = np.random.binomial(1, u, size=(pop.shape)) # mutations per site for the entire population
+        x, y = np.where(mut == 1)
+        for i,j in zip(x,y):
+            new_allele = rnd.choice([k for k in range(0, n_alleles) if k != pop[i,j]])
+            pop[i,j] = new_allele
+        return pop
+
+    def get_viable_offspring(self, offspring):
+        """Generate viable offspring
+        
+        Arguments:
+            offspring {2d numpy array} -- The offspring, viable and inviable.
+        
+        Returns:
+            2d numpy array -- An array containing the viable offspring.
         """
-        if u > 0:
-            mut = np.random.binomial(1, u, size=(mat.shape)) # mutations per site for the entire population
-            muts = []
-            for i,j in zip(mut, mat):
-                temp = []
-                for k in range(len(i)): # use np.where instead of scanning the entire matrix
-                    if i[k]:
-                        new_allele = np.random.randint(0, n_alleles)
-                        while new_allele == j[k]:
-                            new_allele = np.random.randint(0, n_alleles)
-                        temp.append(new_allele)
-                    else:
-                        temp.append(j[k])
-                muts.append(temp)
-            return np.array(muts)
-        else:
-            return mat
+        viable_offspring = []
+        for i in offspring:
+            if i in self.population:
+                viable_offspring.append(i)
+            elif is_viable(i):
+                viable_offspring.append(i)
+        if len(viable_offspring) < self.N:
+            viable_offspring =  viable_offspring + [rnd.choice(viable_offspring) for i in range(self.N - len(viable_offspring))]
+        return np.array(viable_offspring)
 
-    @staticmethod
-    def generate_offspring(genotypes, u, r, N):
-        int_rep = Population.get_int_rep(genotypes)
-        recombinants = Population.recombine(N, r, int_rep)
-        mutants = Population.mutate(recombinants, u)
-        return [RNASeq.convertor(i, inv=True) for i in mutants]
-
-    def get_next_generation(self, sexual=True):
-        if sexual:
-            r = self.r
-        else:
-            r = 0.0
-        offspring = self.generate_offspring(self.population, self.u, r, self.N)
-        viable_offspring = [i for i in offspring if self.is_viable(RNASeq(i))]
-        self.next_gen_population = [RNASeq(i) for i in viable_offspring]
-        self.population = deepcopy(self.next_gen_population)
+    def get_next_generation(self):
+        """Generate the next generation population matrix.
+        """
+        recombinants = Population.recombine_pop(self.r, self.population)
+        mutants = Population.mutate_pop(recombinants, self.u)
+        next_gen = self.get_viable_offspring(mutants)
+        self.population = deepcopy(next_gen)
 
 class TwoPops(object):
 
     def __init__(self, pop, mig_rate=0):
+        """Initialize TwoPops object from Population.
+        
+        Arguments:
+            pop {Population} -- An instance of Population object.
+        
+        Keyword Arguments:
+            mig_rate {float} -- The migration rate between the populations. (default: {0})
+        """
         self.init_pop = deepcopy(pop)
         self.mig_rate = mig_rate
 
@@ -954,31 +914,15 @@ class TwoPops(object):
         file.close()
 
     def migrate(self):
-        pop1 = [i.seq for i in self.pop1.population]
-        pop2 = [i.seq for i in self.pop2.population]
-        migrants = np.random.poisson(self.mig_rate)
-        if len(pop1) <= len(pop2):
-            indices = [np.random.randint(0, len(pop1)) for i in range(migrants)]
-            while len(set(indices)) < migrants:
-                indices = [np.random.randint(0, len(pop1)) for i in range(migrants)]
-        else:
-            indices = [np.random.randint(0, len(pop2)) for i in range(migrants)]
-            while len(set(indices)) < migrants:
-                indices = [np.random.randint(0, len(pop2)) for i in range(migrants)]
-        new_pop1 = []
-        new_pop2 = []
-        for i in range(len(pop1)):
-            if i in indices:
-                new_pop1.append(pop2[i])
-            else:
-                new_pop1.append(pop1[i])
-        for i in range(len(pop2)):
-            if i in indices:
-                new_pop2.append(pop1[i])
-            else:
-                new_pop2.append(pop2[i])
-        self.pop1.get_seq_from_list(new_pop1)
-        self.pop2.get_seq_from_list(new_pop2)
+        """Move a number of indivduals between the two populations according to mig_rate.
+        """
+        pop1_temp = copy(self.pop1.population)
+        pop2_temp = copy(self.pop2.population)
+        migrants = np.random.binomial(1, self.mig_rate, size=self.pop1.N)
+        for i in range(len(migrants)):
+            if migrants[i]:
+                self.pop1.population[i] = pop1_temp[i]
+                self.pop2.population[i] = pop2_temp[i]
 
     def get_inviable_introgressions(self, recipient, donor, n_introgr):
         """Find inviable introgressions from donor sequence to recipient
@@ -1227,6 +1171,15 @@ class TwoPops(object):
             }
 
     def evolve(self, gen, step=500, verbose=False):
+        """Evolve two populations.
+        
+        Arguments:
+            gen {int} -- The number of generation.
+        
+        Keyword Arguments:
+            step {int} -- The intervals at which the relavent statistics are to be saved (default: {500})
+            verbose {bool} -- Print the save points (default: {False})
+        """
         self.init_history()
         self.t = 0
         self.pop1 = deepcopy(self.init_pop)
