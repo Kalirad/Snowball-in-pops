@@ -1206,15 +1206,15 @@ class TwoPops(object):
             int_rep_1 = Population.get_int_rep(self.pop1.population)
             int_rep_2 = Population.get_int_rep(self.pop2.population)
             recs = Population.recombine(self.pop1.N, self.pop1.r, int_rep_1, int_rep_2)
-            recs = [inv_convertor(i) for i in recs]
+            recs = [RNASeq.convertor(i, inv=True) for i in recs]
             recs_w = [self.pop1.is_viable(RNASeq(i)) for i in recs]
             WS = np.sum(recs_w)/float(len(recs_w))
             pop1_recs = Population.recombine(self.pop1.N, self.pop1.r, int_rep_1)
-            pop1_recs = [inv_convertor(i) for i in pop1_recs]
+            pop1_recs = [RNASeq.convertor(i, inv=True) for i in pop1_recs]
             pop1_recs_w = [self.pop1.is_viable(RNASeq(i)) for i in pop1_recs]
             WS_1 = np.sum(pop1_recs_w)/float(len(pop1_recs_w))
             pop2_recs = Population.recombine(self.pop2.N, self.pop2.r, int_rep_2)
-            pop2_recs = [inv_convertor(i) for i in pop2_recs]
+            pop2_recs = [RNASeq.convertor(i, inv=True) for i in pop2_recs]
             pop2_recs_w = [self.pop2.is_viable(RNASeq(i)) for i in pop2_recs]
             WS_2 = np.sum(pop2_recs_w)/float(len(pop2_recs_w))
             WS = np.mean([WS_1, WS_2])

@@ -604,10 +604,8 @@ class Population(object):
             self.ancestor = mut
             count += 1
 
-    def get_seq_from_list(self, seqs):
-        self.population = []
-        for i in (seqs):
-            self.population.append(RNASeq(i))
+    def change_pop(self, new_pop):
+        self.population = deepcopy(new_pop)
 
     def get_allele_freqs(self, locus):
         """Calculate the allele frequency for a given locus.
@@ -630,7 +628,6 @@ class Population(object):
         Returns:
             float -- heterozygosity for the entire sequence.
         """
-
         H = np.array([(1 - np.power(self.get_allele_freqs(i), 2).sum()) for i in range(self.ancestor.L)])
         return H
 
@@ -642,7 +639,7 @@ class Population(object):
             dic -- the dictionary of genotypes with sequences as keys and frequencies as values.
         """
         unique, counts = np.unique(self.population, return_counts=True, axis=0)
-        return dict(zip([RNASeq.convertor(i, inv=True) for i in unique], counts))
+        return dict(zip([RNASeq.convertor(i, inv=True) for i in unique], np.divide(counts, float(self.N))))
  
     @property
     def wt_seq(self):
@@ -678,65 +675,66 @@ class Population(object):
             else:
                 return False
 
-    @staticmethod
-    def recombine_pop(r, pop1, pop2=0):
-        """Recombine population(s)>
+    def recombine_in_pop(self):
+        """Recombine the population
+
+        Returns:
+            2d numpy array -- The recombined population matrix.
+        """
+        sample_1 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
+        sample_2 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
+        rec_prob_num = np.random.binomial(1, self.r, size=self.N).sum()
+        recs_1 = sample_1[:rec_prob_num]
+        recs_2 = sample_2[:rec_prob_num]
+        rec_pos = np.random.randint(1, len(sample_1[0]), size=len(recs_1))
+        for i,j in zip(range(len(recs_1)), rec_pos):
+                recs_1[i][j:,] = 0
+                recs_2[i][:j] = 0
+        recs = recs_1 + recs_2
+        return np.concatenate((recs, sample_1[rec_prob_num:]))
+
+    def recombine_btw_pop(self, other):
+        """Recombine two populations
         
         Arguments:
-            r {float} -- recombination rate per site.
-            pop1 {2d numpy array} -- The matrix representation of the population.
-        
-        Keyword Arguments:
-            pop2 {2d numpy array} -- The matrix representation of a second population. (default: {0})
+            other {Population} -- A second population.
         
         Returns:
-            numpy array -- the matrix of recombinant sequences.
+            [2d numpy array] -- A matrix of recombinants that contains sequences recombined at random positions, where
+                                the recombination probability per site is r.
         """
-        if type(pop1) == type(pop2):
-            mat_1 = pop1[np.random.randint(pop1.shape[0], size= pop1.shape[0]), :]
-            mat_2 = pop2[np.random.randint(pop2.shape[0], size= pop2.shape[0]), :]
-        else:
-            mat_1 = pop1[np.random.randint(pop1.shape[0], size= pop1.shape[0]), :]
-            mat_2 = pop1[np.random.randint(pop1.shape[0], size= pop1.shape[0]), :]
-        rec_probs = np.random.binomial(1, r, (mat_1.shape[0], mat_1.shape[1] - 1))
+        assert type(self) == type(other)
+        sample_1 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
+        sample_2 = other.population[np.random.randint(other.population.shape[0], size= other.population.shape[0]), :]
+        rec_probs = np.random.binomial(1, self.r, (sample_1.shape[0], sample_1.shape[1] - 1))
         recs = []
-        for i,j,k in zip(mat_1, mat_2, rec_probs):
-                rec1 = []
-                rec2 = []
-                rec1.append(i[0])
-                rec2.append(j[0])
+        for i,j,k in zip(sample_1, sample_2, rec_probs): 
+                recombinant = []                          
+                recombinant.append(i[0])
                 site = 1
                 for z in k:
                     if z:
-                        rec1.append(j[site])
-                        rec2.append(i[site])
+                        recombinant.append(j[site])
                     else:
-                        rec1.append(i[site])
-                        rec2.append(j[site])
+                        recombinant.append(i[site])
                     site += 1
-                recs.append(rec1)
-                recs.append(rec2)
-        return np.array(recs[:len(pop1)])
+                recs.append(recombinant)
+        return np.array(recs)
 
-    @staticmethod
-    def mutate_pop(pop, u, n_alleles=4): 
+    def mutate_pop(self, pop): 
         """Mutate the population.
         
         Arguments:
-            pop {2d numpy array} -- The matrix representation of the population.
-            u {float} -- Mutation rate per site.
-        
-        Keyword Arguments:
-            n_alleles {int} -- The number of alleles in this genetic system (default: {4})
+            pop {2d numpy array} -- The matrix representation of the population.        
         
         Returns:
             2d numpy array -- The mutated population matrix.
         """
 
-        mut = np.random.binomial(1, u, size=(pop.shape)) # mutations per site for the entire population
+        mut = np.random.binomial(1, self.u, size=(pop.shape)) # mutations per site for the entire population
         x, y = np.where(mut == 1)
         for i,j in zip(x,y):
-            new_allele = rnd.choice([k for k in range(0, n_alleles) if k != pop[i,j]])
+            new_allele = rnd.choice([k for k in range(0, 4) if k != pop[i,j]]) # number of alleles = 4
             pop[i,j] = new_allele
         return pop
 
@@ -762,8 +760,8 @@ class Population(object):
     def get_next_generation(self):
         """Generate the next generation population matrix.
         """
-        recombinants = Population.recombine_pop(self.r, self.population)
-        mutants = Population.mutate_pop(recombinants, self.u)
+        recombinants = self.recombine_in_pop()
+        mutants = self.mutate_pop(recombinants)
         next_gen = self.get_viable_offspring(mutants)
         self.population = deepcopy(next_gen)
 
@@ -778,6 +776,7 @@ class TwoPops(object):
         Keyword Arguments:
             mig_rate {float} -- The migration rate between the populations. (default: {0})
         """
+        assert 0 <= mig_rate <= 1.
         self.init_pop = deepcopy(pop)
         self.mig_rate = mig_rate
 
@@ -1122,9 +1121,9 @@ class TwoPops(object):
         H_within = []
         H_within.append(self.pop1.gene_diversity.mean())
         H_within.append(self.pop2.gene_diversity.mean())
-        pooled = [i.seq for i in self.pop1.population] + [i.seq for i in self.pop2.population]
+        pooled = np.concatenate((self.pop1.population, self.pop2.population))
         pooled_pop = Population(self.pop1.ancestor.seq, len(pooled))
-        pooled_pop.get_seq_from_list(pooled)
+        pooled_pop.change_pop(pooled)
         HS = np.mean(H_within)
         HT = pooled_pop.gene_diversity.mean()
         if HT == 0:
@@ -1147,18 +1146,16 @@ class TwoPops(object):
         WS = 0
         RI_r = 0
         if self.pop1.r:
-            int_rep_1 = Population.get_int_rep(self.pop1.population)
-            int_rep_2 = Population.get_int_rep(self.pop2.population)
-            recs = Population.recombine(self.pop1.N, self.pop1.r, int_rep_1, int_rep_2)
-            recs = [inv_convertor(i) for i in recs]
+            recs = self.pop1.recombine_btw_pop(self.pop2)
+            recs = [RNASeq.convertor(i, inv=True) for i in recs]
             recs_w = [self.pop1.is_viable(RNASeq(i)) for i in recs]
             WS = np.sum(recs_w)/float(len(recs_w))
-            pop1_recs = Population.recombine(self.pop1.N, self.pop1.r, int_rep_1)
-            pop1_recs = [inv_convertor(i) for i in pop1_recs]
+            pop1_recs = self.pop1.recombine_btw_pop(self.pop1)
+            pop1_recs = [RNASeq.convertor(i, inv=True) for i in pop1_recs]
             pop1_recs_w = [self.pop1.is_viable(RNASeq(i)) for i in pop1_recs]
             WS_1 = np.sum(pop1_recs_w)/float(len(pop1_recs_w))
-            pop2_recs = Population.recombine(self.pop2.N, self.pop2.r, int_rep_2)
-            pop2_recs = [inv_convertor(i) for i in pop2_recs]
+            pop2_recs = self.pop2.recombine_btw_pop(self.pop2)
+            pop2_recs = [RNASeq.convertor(i, inv=True) for i in pop2_recs]
             pop2_recs_w = [self.pop2.is_viable(RNASeq(i)) for i in pop2_recs]
             WS_2 = np.sum(pop2_recs_w)/float(len(pop2_recs_w))
             WS = np.mean([WS_1, WS_2])

@@ -1,0 +1,293 @@
+% Template for PLoS
+% Version 3.5 March 2018
+%
+% % % % % % % % % % % % % % % % % % % % % %
+%
+% -- IMPORTANT NOTE
+%
+% This template contains comments intended 
+% to minimize problems and delays during our production 
+% process. Please follow the template instructions
+% whenever possible.
+%
+% % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Once your paper is accepted for publication, 
+% PLEASE REMOVE ALL TRACKED CHANGES in this file 
+% and leave only the final text of your manuscript. 
+% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
+% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info or contact us at latex@plos.org.
+%
+%
+% There are no restrictions on package use within the LaTeX files except that 
+% no packages listed in the template may be deleted.
+%
+% Please do not include colors or graphics in the text.
+%
+% The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- FIGURES AND TABLES
+%
+% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
+%
+% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
+% - Figures should be uploaded separately from your manuscript file. 
+% - Figures generated using LaTeX should be extracted and removed from the PDF before submission. 
+% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
+% For figure citations, please use "Fig" instead of "Figure".
+% See http://journals.plos.org/plosone/s/figures for PLOS figure guidelines.
+%
+% Tables should be cell-based and may not contain:
+% - spacing/line breaks within cells to alter layout or alignment
+% - do not nest tabular environments (no tabular environments within tabular environments)
+% - no graphics or colored text (cell background color/shading OK)
+% See http://journals.plos.org/plosone/s/tables for table guidelines.
+%
+% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- EQUATIONS, MATH SYMBOLS, SUBSCRIPTS, AND SUPERSCRIPTS
+%
+% IMPORTANT
+% Below are a few tips to help format your equations and other special characters according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
+%
+% For inline equations, please be sure to include all portions of an equation in the math environment.  For example, x$^2$ is incorrect; this should be formatted as $x^2$ (or $\mathrm{x}^2$ if the romanized font is desired).
+%
+% Do not include text that is not math in the math environment. For example, CO2 should be written as CO\textsubscript{2} instead of CO$_2$.
+%
+% Please add line breaks to long display equations when possible in order to fit size of the column. 
+%
+% For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
+%
+% When adding superscript or subscripts outside of brackets/braces, please group using {}.  For example, change "[U(D,E,\gamma)]^2" to "{[U(D,E,\gamma)]}^2". 
+%
+% Do not use \cal for caligraphic font.  Instead, use \mathcal{}
+%
+% % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Please contact latex@plos.org with any questions.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% Use Unicode characters when possible
+\usepackage[utf8x]{inputenc}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% ligatures disabled
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+% Remove comment for double spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in 
+\textheight 8.75in
+
+% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\renewcommand{\figurename}{Fig}
+
+% Use the PLoS provided BiBTeX style
+\bibliographystyle{plos2015}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+
+
+% Header and Footer with logo
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+%\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+%\setlength{\headheight}{27.023pt}
+%\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+\lfoot{\today}
+
+%% Include all macros below
+
+\newcommand{\lorem}{{\bf LOREM}}
+\newcommand{\ipsum}{{\bf IPSUM}}
+
+%% END MACROS SECTION
+
+
+\begin{document}
+\vspace*{0.2in}
+
+% Title must be 250 characters or less.
+\begin{flushleft}
+{\Large
+\textbf\newline{Robustness and the evolution of genetic incompatibilities: insights from a RNA model}
+}
+\newline
+% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
+\\
+
+Ata Kalirad\textsuperscript{1},
+Ricardo B. R. Azevedo\textsuperscript{2,*}
+
+\bigskip
+\textbf{1} School of Biological Science, Institute for Research in Fundamental Sciences (IPM), Iran
+\\
+\textbf{2} Department of Biology and Biochemistry, University of Houston, Houston, Texas, United States of America
+
+\bigskip
+
+
+
+* razevedo@uh.edu
+
+\end{flushleft}
+% Please keep the abstract below 300 words
+\section*{Abstract}
+\textbf{}
+
+\hspace{2in}
+
+\linenumbers
+
+%\section*{Introduction}
+The genetics of speciation has been generally ascribed to the negative epistasis between, otherwise benign, alleles at different loci in the hybrids (reviewed in \cite{Maheshwari2011}). In this view, neutral or adaptive mutations arise and fix in different lineages independently, and such accumulation makes it more likely for mutations from different lineages to be incompatible with each other \cite{Orr1995}. Assuming that populations are monomorphic during there evolution, as in strong selection weak mutation (SSWM) regime,  is a valid approach to simulate evolution as a series of beneficial mutations going to fixation \cite{Sniegowski2010}, but it can be problematic in understanding speciation between lineages, since it neglects the possible effect of population dynamic on the emergence of incompatibilities. Recent studies have presented us with an inconvenient and yet intriguing reality: incompatibilities are segregating within species \cite{Seidel2008, Corbett-Detig2013, Hou2014, Chae2014}. 
+
+Here, we present a individual-based model to investigate how population dynamics may affect the accumulation of incompatibilities between two evolving lineages.
+
+\section*{Results}
+
+\subsection*{The accumulation of DMIs declines as recombination load increases} 
+
+\subsection*{Higher mutation rate results in fewer incompatibilities}
+
+\section*{Discussion}
+\emph{Mutational robustness} can be defined as the ability of a phenotype to be viable in the face of mutations \cite{Gardner2006}. Using digital organisms, the sexual populations become more insensitive to mutation, i.e., they are more robust, than asexual populations \cite{Misevic2006}. Increasing recombination rate can result in an increased robustness \cite{Gardner2006}. The link between robustness and recombination stems from the fact that recombination can result in selection for ``mixability'', i.e., selection for mutations that can perform well in a variety of genetic backgrounds \cite{Livnat2008, Azevedo2006}. It has been shown that, at least in artificial gene networks, recombination in can result in selection for mixable genotypes \cite{Lohaus2010}. This selection for mixability should, by definition, inhibit the development of incompatibilities between genotypes. 
+
+In addition, the fact that asexual individual-based simulations with lower mutations rates accumulate more DMIs when compared to simulations with higher mutation rates further supports the veracity of the robustness hypothesis. 
+
+Given the negative relation between number of DMIs and the recombination rate, it is plausible that at the genomic level, where the recombination rate is not homogenous \cite{Myers2005}, suppression of recombination rate in regions of the genome can make them more likely to be involved in an incompatibility. Although such reasoning has been suggested for recombination between populations \cite{Nosil2012}, to my knowledge, this mechanism linking the suppression of recombination to the emergence of incompatibilities has not been proposed before.
+
+The effect of recombination on robustness and, consequently, on the accumulation of incompatibilities means that one should be cautious when dealing with a theoretical/computation model that does not take recombination into account. In the absence of recombination, an asexual model would result in an overestimation of the number of incompatibilities and high level of RI. In the presence of recombination, selection for mixability would reduce the number of DMIs accumulated over divergence, a fact that is absent from an asexual theoretical/computation model. The higher levels of RI observed in an asexual model may also be misleading since in populations with low recombination only a few hybrids would actually experience low fitness.
+
+\section*{Materials and methods}
+
+\subsection*{The individual-based model}
+
+We start from a random $100$ nucleotide RNA sequence, henceforth referred to as the reference sequence. The fitness of any RNA sequence during simulation is calculated relative to the reference sequence, according to Equation \ref{eq:fitness}. The reference sequence undergoes $200$ random neutral substitutions in succession. The resulting sequence is used as the ancestral sequence. The ancestral population consists of $N$ individual ancestral sequences, where $N$ is the population size. All the results presented in this section are based on $1000$ simulations, $\alpha = 12$, and population size of $N=1000$.
+
+\subsection*{Fitness} 
+
+In our model, fitness is defined as:
+
+\begin{equation}
+	w_{i} = \left\{\begin{array}{ll}
+    		1 & \quad  \mathrm{if}  \quad  \delta \leqslant \alpha\\
+			0 & \quad  \mathrm{otherwise}   \\
+			\end{array}\right.
+\label{eq:fitness}
+\end{equation} 
+
+where $\delta$ is the Hamming distance between matrix $i$ and our reference sequecne, and $\alpha$ is an arbitrary cutoff.
+
+\subsection*{Mutation}
+
+Mutations arise according a Bernoulli process where each site mutates according to the mutation rate per site per generation ($u$). All types of base-substitution mutations have equal probability.  Insertions and deletions are not considered.
+
+\subsection*{Recombination}
+
+For a population of size $N$, we randomly sample two sets of $N$ sequences with replacement from the population and generate $N$ recombinants. Two genotypes can undergo as many as $L-1$ crossover events between each other with probability $r$ per interval. $r$ can vary from $0$ (i.e., no recombination events) to $0.5$ (i.e., free recombination between all loci). If no crossovers have taken place, the parental sequences are allowed to mutate, and then moved to the next generation.
+
+\subsection*{Divergence}
+
+The ancestral sequence is used to found two identical haploid populations. At each generation, both populations recombine and mutate. After recombination and mutation, I calculate the fitness of each sequence. The next generation is composed of viable genotypes after recombination and mutation.  
+
+\subsection*{Inviable introgressions}
+
+Two viable sequences, 1 and 2, differ at $k$ sites.  To detect DMIs of increasing complexity we conduct introgressions of one, two, or three diverged nucleotides from one sequence to another, following the approach utilized in \cite{Kalirad2017a}.
+
+\subsection*{Code availability}
+
+\section*{Supporting information}
+\section*{Acknowledgments}
+
+
+\nolinenumbers
+
+
+
+% Either type in your references using
+% \begin{thebibliography}{}
+% \bibitem{}
+% Text
+% \end{thebibliography}
+%
+% or
+%
+% Compile your BiBTeX database using our plos2015.bst
+% style file and paste the contents of your .bbl file
+% here. See http://journals.plos.org/plosone/s/latex for 
+% step-by-step instructions.
+% 
+\bibliography{refs}
+
+
+\end{document}
+
