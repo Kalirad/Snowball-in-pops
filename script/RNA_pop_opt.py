@@ -26,7 +26,8 @@ RNA_nucl = ['A', 'C', 'G', 'U']
 # dict storing the secondary structures of RNA sequences during divergence
 RNA_folding_dict = {}
 
-# set random number generator seed
+# set
+#  random number generator seed
 np.random.set_state(('MT19937', np.array([
     3691495208, 2881111814, 3977485953,  126022579, 1276930617,
      355103692, 3248493791, 3009808844,  612188080,  248004424,
@@ -200,7 +201,7 @@ class RNASeq(object):
         self.update_struct()
         self.bp = self.struct.count('(')
 
-    def update_struct(self):
+    def update_struct(self): 
         """Calculate MFE and secondary structure of current RNA sequence.
         Check if MFE and secondary structure have already been calculated.
 
@@ -281,7 +282,7 @@ class RNASeq(object):
         >>> RNASeq.mutate('AAAAAAA', [0, 1, 4], ['C', 'G', 'U'])
         'CGAAUAA'
         """
-        if type(site) == list:
+        if type(site) is list:
             assert len(site) == len(nucl)
             for i, j in zip(site, nucl):
                 seq = seq[:i] + j + seq[i + 1:]
@@ -342,34 +343,6 @@ class RNASeq(object):
             if ch1 != ch2:
                 diffs += 1
         return diffs
-
-    def diverge(self, other):
-        """Mutate RNASeq while preventing multiple-hits.  Calculate new
-        structure.
-
-        Exclude sites that have mutated previously by preventing convergence
-        with another sequence.  Throw exception if sequences are already
-        completely diverged.
-
-        Parameters
-        ----------
-        other : RNASeq
-            RNA sequence self is diverging from.
-
-        Raises
-        ------
-        ValueError
-            Sequence cannot diverge any more.
-        """
-        ini_dist = self.get_hamdist(self.seq, other.seq)
-        if ini_dist == self.L:
-            raise ValueError('The two sequences are already completely diverged.')
-        fin_dist = ini_dist
-        while fin_dist != ini_dist + 1:
-            mut = RNASeq.mutate_random(self.seq)
-            fin_dist = self.get_hamdist(mut, other.seq)
-        self.seq = mut
-        self.update_struct()
 
     @staticmethod
     def get_diverged_sites(seq1, seq2):
@@ -468,7 +441,7 @@ class RNASeq(object):
         return introgress
 
     @staticmethod
-    def recombine(seq1, seq2):
+    def get_all_recombinants(seq1, seq2):
         """Generate all recombinants of two RNA sequences resulting from a
         single crossover event.
 
@@ -488,7 +461,7 @@ class RNASeq(object):
 
         Examples
         --------
-        >>> RNASeq.recombine('AAAA', 'UUUU')
+        >>> RNASeq.get_all_recombinants('AAAA', 'UUUU')
         ['AUUU', 'UAAA', 'AAUU', 'UUAA', 'AAAU', 'UUUA']
         """
         assert len(seq1) == len(seq2)
@@ -554,7 +527,7 @@ class RNASeq(object):
 
 class Population(object):
   
-    def __init__(self, seq, pop_size, mut_rate=1e-3, rec_rate=0.0, alpha=12):
+    def __init__(self, seq, pop_size, mut_rate=1e-3, rec_rate=0.0, alpha=12, t_burnin=200):
         """Initialize Population object from reference RNA sequence and alpha.
 
         The reference sequence and alpha define the fitness landscape.  A
@@ -571,20 +544,20 @@ class Population(object):
         alpha : int, optional
             alpha.
         """
+        assert type(pop_size) == int and pop_size > 0
+        assert type(mut_rate) == float and 0 <= mut_rate <= 1.
+        assert type(rec_rate) == float and 0 <= rec_rate <= 0.5
         self.ref_seq = RNASeq(seq)
+        assert self.ref_seq.bp > alpha
         self.ancestor = RNASeq(seq)
         self.alpha = alpha
         self.N = pop_size
         self.u = mut_rate
         self.r = rec_rate
-        self.burnin()
+        self.burnin(t_burnin)
         self.population = np.array([RNASeq.convertor(seq) for i in range(self.N)])
-        assert self.ref_seq.bp > self.alpha
-        assert type(self.N) == int and self.N > 0
-        assert type(self.u) == float and 0 <= self.u <= 1.
-        assert type(self.r) == float and 0 <= self.r <= 0.5
 
-    def burnin(self, t=200):
+    def burnin(self, t):
         """Evolve ancestor (initially set to equal the reference sequence) for
         t (viable) substitutions allowing multiple hits.  Update ancestor at
         the end.  Set lineages A and B to ancestor.
@@ -596,7 +569,7 @@ class Population(object):
         """
         count = 0
         while count < t:
-            fix = 0
+            fix = False
             while not fix:
                 mut = deepcopy(self.ancestor)
                 mut = RNASeq(RNASeq.mutate_random(mut.seq))
@@ -614,7 +587,7 @@ class Population(object):
             locus {int} -- the site for which the allele frequency is to be calculated.
         
         Returns:
-            float -- the allele frequncy for locus.
+            list -- the allele frequncya locus.
         """
         allele_freqs = []
         unique, counts = np.unique(self.population[:,locus], return_counts=True)
@@ -639,7 +612,7 @@ class Population(object):
             dic -- the dictionary of genotypes with sequences as keys and frequencies as values.
         """
         unique, counts = np.unique(self.population, return_counts=True, axis=0)
-        return dict(zip([RNASeq.convertor(i, inv=True) for i in unique], np.divide(counts, float(self.N))))
+        return dict(zip([RNASeq.convertor(i, inv=True) for i in unique], np.divide(counts, float(self.N)))) #add a small random numbers 0 < <1/(N*N) to uniques. 
  
     @property
     def wt_seq(self):
@@ -648,10 +621,10 @@ class Population(object):
         Returns:
             string -- the most common sequence.
         """
-        return max(self.genotypes_dic, key=self.genotypes_dic.get)
+        return max(self.genotypes_dic, key=self.genotypes_dic.get) 
 
     def is_viable(self, seq):
-        """Evaluate whether a sequence is viable
+        """Evaluate whether a sequence is viable (More estensive docs)
 
         See Evolve.__init__() for more details.
 
@@ -675,14 +648,18 @@ class Population(object):
             else:
                 return False
 
-    def recombine_in_pop(self):
-        """Recombine the population
+    def recombine_in_pop(self, other=False):
+        """Recombine the population (More estensive docs)
 
         Returns:
             2d numpy array -- The recombined population matrix.
         """
-        sample_1 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
-        sample_2 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
+        if not other:
+            sample_1 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
+            sample_2 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
+        else:
+            sample_1 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
+            sample_2 = other.population[np.random.randint(other.population.shape[0], size= other.population.shape[0]), :]
         rec_prob_num = np.random.binomial(1, self.r, size=self.N).sum()
         recs_1 = sample_1[:rec_prob_num]
         recs_2 = sample_2[:rec_prob_num]
@@ -692,34 +669,6 @@ class Population(object):
                 recs_2[i][:j] = 0
         recs = recs_1 + recs_2
         return np.concatenate((recs, sample_1[rec_prob_num:]))
-
-    def recombine_btw_pop(self, other):
-        """Recombine two populations
-        
-        Arguments:
-            other {Population} -- A second population.
-        
-        Returns:
-            [2d numpy array] -- A matrix of recombinants that contains sequences recombined at random positions, where
-                                the recombination probability per site is r.
-        """
-        assert type(self) == type(other)
-        sample_1 = self.population[np.random.randint(self.population.shape[0], size= self.population.shape[0]), :]
-        sample_2 = other.population[np.random.randint(other.population.shape[0], size= other.population.shape[0]), :]
-        rec_probs = np.random.binomial(1, self.r, (sample_1.shape[0], sample_1.shape[1] - 1))
-        recs = []
-        for i,j,k in zip(sample_1, sample_2, rec_probs): 
-                recombinant = []                          
-                recombinant.append(i[0])
-                site = 1
-                for z in k:
-                    if z:
-                        recombinant.append(j[site])
-                    else:
-                        recombinant.append(i[site])
-                    site += 1
-                recs.append(recombinant)
-        return np.array(recs)
 
     def mutate_pop(self, pop): 
         """Mutate the population.
@@ -747,23 +696,28 @@ class Population(object):
         Returns:
             2d numpy array -- An array containing the viable offspring.
         """
-        viable_offspring = []
+        viability = []
         for i in offspring:
             if i in self.population:
-                viable_offspring.append(i)
-            elif is_viable(i):
-                viable_offspring.append(i)
-        if len(viable_offspring) < self.N:
-            viable_offspring =  viable_offspring + [rnd.choice(viable_offspring) for i in range(self.N - len(viable_offspring))]
+                viability.append(True)
+            elif is_viable(RNASeq(i, inv=True)):
+                viability.append(False) 
+            else:
+                viability.append(False)
+        viable_offspring_index = [rnd.choice(np.where(viability)[0]) for i in range(self.N)]
+        viable_offspring = [offspring[i] for i in viable_offspring_index]
         return np.array(viable_offspring)
 
     def get_next_generation(self):
         """Generate the next generation population matrix.
         """
-        recombinants = self.recombine_in_pop()
+        if self.r == 0:
+            recombinants = copy(self.population)
+        else:
+            recombinants = self.recombine_in_pop()
         mutants = self.mutate_pop(recombinants)
         next_gen = self.get_viable_offspring(mutants)
-        self.population = deepcopy(next_gen)
+        self.population = next_gen.copy()
 
 class TwoPops(object):
 
@@ -1139,7 +1093,7 @@ class TwoPops(object):
             }
 
     def get_RI(self):
-        recs = RNASeq.recombine(self.pop1.wt_seq, self.pop2.wt_seq)
+        recs = RNASeq.get_all_recombinants(self.pop1.wt_seq, self.pop2.wt_seq)
         recs_w = [self.pop1.is_viable(RNASeq(i)) for i in recs]
         RI_max = 1. - np.sum(recs_w)/float(len(recs_w))
         WH = 0
