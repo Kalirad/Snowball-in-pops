@@ -700,7 +700,7 @@ class Population(object):
         for i in offspring:
             if i in self.population:
                 viability.append(True)
-            elif is_viable(RNASeq(i, inv=True)):
+            elif is_viable(RNASeq(RNASeq.convertor(i, inv=True)):
                 viability.append(False) 
             else:
                 viability.append(False)
