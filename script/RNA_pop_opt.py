@@ -1,7 +1,7 @@
 """
-A individual-based model of sequence divergence on a holey fitness landscape based on RNA
-folding to simulate the accumulation of Dobzhansky-Muller incompatibilities
-(DMIs).
+A individual-based model of sequence divergence on a holey fitness landscape 
+based on RNA folding to simulate the accumulation of Dobzhansky-Muller 
+incompatibilities (DMIs).
 """
 
 __author__ = 'Ata Kalirad, Ricardo B. R. Azevedo'
@@ -179,7 +179,7 @@ class RNASeq(object):
 
         Note
         ----
-        Does not check whether sequence contains invalid nucleotides.
+        Does not check whether sequence contains invalid nucleotide(s).
 
         Parameters
         ----------
@@ -242,7 +242,18 @@ class RNASeq(object):
         return RNASeq(''.join(seq_array))
 
     @staticmethod
-    def convertor(seq, inv=False):
+    def convertor(seq, inv=False)
+        """Convert a sting to int or vice versa.
+
+        Keyword Arguments:
+            inv {bool} -- if True takes a list of digits and converts it into a 
+            strings, else converts a string into a list of digits 
+            (default: {False}).
+        
+        Returns:
+            list or str 
+        """
+
         if inv:
             dic = {0:'A', 1:'U', 2:'C', 3:'G'}
         else:
@@ -648,8 +659,15 @@ class Population(object):
             else:
                 return False
 
-    def recombine_in_pop(self, other=False):
-        """Recombine the population (More estensive docs)
+    def recombine_pop(self, other=False):
+        """Recombine within population or between two populations. Recombination 
+        probability (r) determines if a randomly drawn sequence will recombine 
+        with another randomly drawn sequences. Only a single cross-over is allowed.
+        
+        Keyword Arguments:
+            other {bool} -- Recombine two samples drawn form the population, 
+            otherwise recombine two samples drawn from self.population and 
+            other.population (default: {False}).
 
         Returns:
             2d numpy array -- The recombined population matrix.
@@ -700,7 +718,7 @@ class Population(object):
         for i in offspring:
             if i in self.population:
                 viability.append(True)
-            elif is_viable(RNASeq(RNASeq.convertor(i, inv=True)):
+            elif self.is_viable(RNASeq(RNASeq.convertor(i, inv=True))):
                 viability.append(False) 
             else:
                 viability.append(False)
@@ -714,7 +732,7 @@ class Population(object):
         if self.r == 0:
             recombinants = copy(self.population)
         else:
-            recombinants = self.recombine_in_pop()
+            recombinants = self.recombine_pop()
         mutants = self.mutate_pop(recombinants)
         next_gen = self.get_viable_offspring(mutants)
         self.population = next_gen.copy()
@@ -867,8 +885,11 @@ class TwoPops(object):
         file.close()
 
     def migrate(self):
-        """Move a number of indivduals between the two populations according to mig_rate.
+        """Simulate reciprocal migration between pop1 and pop2 as a binomial 
+        process where mig_rate determines the probability that the ith individual 
+        in pop1 is swapped with the ith individual in pop2. 
         """
+
         pop1_temp = copy(self.pop1.population)
         pop2_temp = copy(self.pop2.population)
         migrants = np.random.binomial(1, self.mig_rate, size=self.pop1.N)
@@ -1093,30 +1114,26 @@ class TwoPops(object):
             }
 
     def get_RI(self):
+        """Calculate reproductive isolation between the two populations
+        
+        Output:
+        RI_max: The max level of reproductive isolation based on the inviability 
+            of all the single cross-over recombinants.
+        RI: The level of reproductive isolation based on the inviability of the 
+            single cross-over recombinants according to recombination rate (r).
+        """
+
         recs = RNASeq.get_all_recombinants(self.pop1.wt_seq, self.pop2.wt_seq)
         recs_w = [self.pop1.is_viable(RNASeq(i)) for i in recs]
         RI_max = 1. - np.sum(recs_w)/float(len(recs_w))
-        WH = 0
-        WS = 0
         RI_r = 0
         if self.pop1.r:
-            recs = self.pop1.recombine_btw_pop(self.pop2)
+            recs = self.pop1.recombine_pop(other=self.pop2)
             recs = [RNASeq.convertor(i, inv=True) for i in recs]
             recs_w = [self.pop1.is_viable(RNASeq(i)) for i in recs]
             WS = np.sum(recs_w)/float(len(recs_w))
-            pop1_recs = self.pop1.recombine_btw_pop(self.pop1)
-            pop1_recs = [RNASeq.convertor(i, inv=True) for i in pop1_recs]
-            pop1_recs_w = [self.pop1.is_viable(RNASeq(i)) for i in pop1_recs]
-            WS_1 = np.sum(pop1_recs_w)/float(len(pop1_recs_w))
-            pop2_recs = self.pop2.recombine_btw_pop(self.pop2)
-            pop2_recs = [RNASeq.convertor(i, inv=True) for i in pop2_recs]
-            pop2_recs_w = [self.pop2.is_viable(RNASeq(i)) for i in pop2_recs]
-            WS_2 = np.sum(pop2_recs_w)/float(len(pop2_recs_w))
-            WS = np.mean([WS_1, WS_2])
-            RI_r = 1. - WH/WS
+            RI_r = 1. - WS
         return {
-            'WH' : WH, 
-            'WS' : WS, 
             'RI_max': RI_max, 
             'RI': RI_r
             }
