@@ -242,7 +242,7 @@ class RNASeq(object):
         return RNASeq(''.join(seq_array))
 
     @staticmethod
-    def convertor(seq, inv=False)
+    def convertor(seq, inv=False):
         """Convert a sting to int or vice versa.
 
         Keyword Arguments:
@@ -253,7 +253,6 @@ class RNASeq(object):
         Returns:
             list or str 
         """
-
         if inv:
             dic = {0:'A', 1:'U', 2:'C', 3:'G'}
         else:
